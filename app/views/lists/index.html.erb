@@ -1,7 +1,8 @@
-<ul>
   <% @lists.each do |list| %>
-    <li><%= link_to "#{list.name}", list_path(list) %></li>
+    <div class="card-product">
+      <%= cl_image_tag list.photo.key %>
+        <div class="card-product-infos">
+          <h2><%= link_to "#{list.name}", list_path(list) %></h2>
+        </div>
+    </div>
   <% end %>
-</ul>
-
-
